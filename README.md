@@ -1,7 +1,8 @@
 
-# Implement Statistics with Functions
+# Implementing Statistics with Functions
 
-## SWBATs
+## Objectives
+You will be able to:
 * Create functions to model measures of central tendency and dispersion
 * Perform basic statistical analysis of given data using measures of central tendency and dispersion. 
 
@@ -198,7 +199,7 @@ print(get_mean(test2)) # 2.5
     None
 
 
-Now we'll test the function by passing in the heigt list.
+Now we'll test the function by passing in the height list.
 
 
 ```python
@@ -369,13 +370,6 @@ Thats done. Now can see calculate mode and compare it with our mean and median v
 ```python
 get_mode(height)
 ```
-
-
-
-
-    []
-
-
 
 So the mode value is much lower than our mean and median calculated earlier. What do you make of this? The answer to that could be subjective and depends on the problem. i.e. If your problem is to identify sizes for garments that would sell the most, you can not disregard mode. However, if you want to get an idea about the general or typical height of individuals, you can probably still do with median and average. 
 
