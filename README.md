@@ -399,9 +399,13 @@ def get_variance(sample):
 
 test1 = [1, 2, 3, 5, 5, 4]
 test2 = [1, 1, 1, 2, 3, 4, 5, 5, 5]
-print(get_variance(test1)) # 3.2
-print(get_mean(test1))
-print(get_variance(test2)) # 3.4
+print(get_variance(test1)) # 2.22
+print(get_mean(test1)) # 3.33
+print(get_variance(test2)) # 2.89
+2.22
+3.33
+2.89
+
 ```
 
     None
