@@ -419,7 +419,7 @@ You are required to write a function In the cell below, that takes an array of n
 def get_variance(sample):
 
     # First, calculate the sample mean
-    N = len(sample) - 1
+    N = len(sample)
     total = sum(sample)
     sample_mean = total/N
     
@@ -440,9 +440,9 @@ print(get_mean(test1))
 print(get_variance(test2)) # 3.4
 ```
 
-    3.2
+    2.22
     3.33
-    3.41
+    2.89
 
 
 Now we can test the variance of our height list with get_variance() function. 
@@ -455,7 +455,7 @@ get_variance(height)
 
 
 
-    87.74
+    87.73
 
 
 
