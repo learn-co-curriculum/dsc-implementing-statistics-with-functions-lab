@@ -209,7 +209,7 @@ mean = get_mean(height)
 # Uncomment following command after coding the function
 #print("Sample Mean:", mean)
 
-# Sample Mean: 69.5783
+# Sample Mean: 69.58
 ```
 
 So we have our mean length, 69.5, and this confirms our observations from the histogram. But we also some outliers in out data above and we know outliers effect the mean calculation by pulling mean value in their direction.  So let's remove these outliers and create a new list to see if our mean shifts of stays. We'll use a threshold of 80 inches, i.e. filter out any values greater than 80. 
