@@ -433,6 +433,17 @@ Recall that the formula for Standard Deviation is:
 
 you would need `sqrt` method from math library to calculate the square root. 
 
+**Note:** *Alternatively, another approach to finding the square root of a number would be to raise that number to the power of `0.5`. For example, if we wanted to find the square root of `100`, we could raise `100` to the power of `0.5`, which would give us the number `10.0`. However, **either** approach will work.*
+
+```python
+100**0.5
+# 10.0
+
+from math import sqrt
+sqrt(100)
+# 10.0
+```
+
 
 ```python
 from math import sqrt
@@ -488,7 +499,7 @@ Follow the boxplot method shown earier and build a boxplot for height data. See 
 
 
 
-![png](index_files/index_54_1.png)
+![png](index_files/index_55_1.png)
 
 
 
