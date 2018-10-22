@@ -211,7 +211,7 @@ mean = get_mean(height)
 # Uncomment following command
 print("Sample Mean:", mean)
 
-# Sample Mean: 69.5783
+# Sample Mean: 69.58
 ```
 
     Sample Mean: 69.58
