@@ -1,5 +1,5 @@
 
-# Implement Statistics with Functions - Lab
+# Implementing Statistics with Functions - Lab
 
 ## Introduction 
 In this lab you'll dive deep into calculating the measures of central tendency and dispersion introduced in previous lessons. You will implement the code the formulas for these functions in python which will require you to use the programming skills that you have gained in first two sections of the module. So let's get started with this.
