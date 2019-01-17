@@ -1,13 +1,14 @@
 
-# Implementing Statistics with Functions
+# Implement Statistics with Functions - Lab
+
+## Introduction 
+In this lab you'll dive deep into calculating the measures of central tendency and dispersion introduced in previous lessons. You will implement the code the formulas for these functions in python which will require you to use the programming skills that you have gained in first two sections of the module. So let's get started with this.
 
 ## Objectives
+
 You will be able to:
 * Create functions to model measures of central tendency and dispersion
 * Perform basic statistical analysis of given data using measures of central tendency and dispersion. 
-
-## Introduction 
-In this lab you'll dive deep into calculating the measures of central tendency and dispersion introduced in previous lessons. You will implement the code the formulas for these functions in Python which will require you to use the programming skills that you have gained in first two sections of the module. So let's get started with this.
 
 ### Dataset
 
@@ -119,11 +120,16 @@ df.head()
 
 
 
+
+```python
+# Record your initial observations on the histogram here 
+```
+
 We are only interested in the heigt column, so we'll save this now as a list.
 
 
 ```python
-height = df.height.values.tolist()
+v
 print (len(height))
 print (height)
 ```
@@ -141,7 +147,6 @@ In the cell below, Import matplotlib as we saw earlier and plot a histogram of t
 
 ```python
 # Import matplotlib and plot histogram for height data
-
 ```
 
 
@@ -149,23 +154,7 @@ In the cell below, Import matplotlib as we saw earlier and plot a histogram of t
 # Expected output below
 ```
 
-
-
-
-    (array([ 917., 1972., 1230.,  228.,    0.,    0.,    0.,  438.]),
-     array([59., 64., 69., 74., 79., 84., 89., 94., 99.]),
-     <a list of 8 Patch objects>)
-
-
-
-
-![png](index_files/index_9_1.png)
-
-
-
-```python
-# Record your initial observations on the histogram here 
-```
+![](index_files/index_22_0.png)
 
 Do you spot anything unsual above , some outliers maybe ?
 
@@ -186,7 +175,7 @@ def get_mean(data):
 
     mean = None
     
-    return mean
+    return round(mean,2)
 
 test1 = [5, 4, 1, 3, 2]
 test2 = [4, 2, 3, 1]
@@ -194,10 +183,6 @@ test2 = [4, 2, 3, 1]
 print(get_mean(test1)) # 3
 print(get_mean(test2)) # 2.5
 ```
-
-    None
-    None
-
 
 Now we'll test the function by passing in the height list.
 
@@ -207,10 +192,13 @@ Now we'll test the function by passing in the height list.
 mean = get_mean(height)
 
 # Uncomment following command after coding the function
-#print("Sample Mean:", mean)
+print("Sample Mean:", mean)
 
 # Sample Mean: 69.58
 ```
+
+    Sample Mean: 69.58
+
 
 So we have our mean length, 69.5, and this confirms our observations from the histogram. But we also some outliers in out data above and we know outliers effect the mean calculation by pulling mean value in their direction.  So let's remove these outliers and create a new list to see if our mean shifts of stays. We'll use a threshold of 80 inches, i.e. filter out any values greater than 80. 
  
@@ -237,7 +225,7 @@ filter_list(test) # [60, 70]
 
 
 
-    []
+    [60, 70]
 
 
 
@@ -246,23 +234,22 @@ Great, now we can filter our height list and plot a new histogram for the new li
 
 ```python
 # Filter the height list using above function
-height_filtered = filter_list(height)
 ```
 
 
 ```python
 # Plot a histogram for the filtered list - use 8 bins as before
-
+import matplotlib.pyplot as plt
 ```
+
+
+![png](index_files/index_20_0.png)
+
 
 
 ```python
 # Expected output
 ```
-
-
-![png](index_files/index_22_0.png)
-
 
 
 ```python
@@ -271,6 +258,13 @@ get_mean(height_filtered)
 
 # 66.85
 ```
+
+
+
+
+    66.85
+
+
 
 Now based on your findings before and after the outliers in mean and histogram, record your observations below:
 
@@ -309,8 +303,8 @@ print(get_median(test1)) # 3
 print(get_median(test2)) # 2.5
 ```
 
-    None
-    None
+    3.0
+    2.5
 
 
 Great, now we can pass in our height list to this function to check the median. 
@@ -320,6 +314,13 @@ Great, now we can pass in our height list to this function to check the median.
 get_median(height)
 # 67
 ```
+
+
+
+
+    67.0
+
+
 
 So we have 67 , which is much closer to the filtered list mean (66.85) than the mean we calculated with actual list (69.58). So median in this case seems to be a much better indicative of the central tendency found in the dataset. 
 
@@ -360,8 +361,8 @@ print(get_mode(test1)) # [5]
 print(get_mode(test2)) # [1, 5]
 ```
 
-    []
-    []
+    [5]
+    [1, 5]
 
 
 Thats done. Now can see calculate mode and compare it with our mean and median values. 
@@ -405,7 +406,6 @@ print(get_variance(test2)) # 2.89
 2.22
 3.33
 2.89
-
 ```
 
     None
@@ -499,7 +499,7 @@ Follow the boxplot method shown earier and build a boxplot for height data. See 
 
 
 
-![png](index_files/index_55_1.png)
+![png](index_files/index_54_1.png)
 
 
 
