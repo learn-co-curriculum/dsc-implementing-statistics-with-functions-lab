@@ -139,7 +139,7 @@ print (height[:10]) # Expected Output: [74, 70, 61, 68, 66, 98, 99, 70, 65, 64]
 
     4785
     [74, 70, 61, 68, 66, 98, 99, 70, 65, 64]
-    
+
 
 So around 4700 records of height, that's great. Next, we'll try plotting some basic **_Histograms_** for these records.
 
@@ -178,7 +178,7 @@ plt.hist(height, bins=8)
 
 
 
-![png](output_8_1.png)
+![png](index_files/index_7_1.png)
 
 
 Do you spot anything unusual above? Some outliers, maybe?
@@ -215,7 +215,7 @@ print(get_mean(test2)) # 2.5
 
     3.0
     2.5
-    
+
 
 Now we'll test the function by passing in the heigt list.
 
@@ -231,7 +231,7 @@ print("Sample Mean:", mean)
 ```
 
     Sample Mean: 69.58
-    
+
 
 So we have our mean length, 69.5, and this confirms our observations from the histogram. But we also some outliers in out data above and we know outliers effect the mean calculation by pulling mean value in their direction.  So let's remove these outliers and create a new list to see if our mean shifts of stays. We'll use a threshold of 80 inches, i.e. filter out any values greater than 80. 
  
@@ -276,7 +276,7 @@ plt.hist(filtered_height, bins = 8);
 ```
 
 
-![png](output_19_0.png)
+![png](index_files/index_16_0.png)
 
 
 
@@ -335,7 +335,7 @@ print(get_median(test2)) # 2.5
 
     3
     2.5
-    
+
 
 Great, now we can pass in our height list to this function to check the median. 
 
@@ -398,7 +398,7 @@ print(get_mode(test2)) # [1, 5]
 
     [5]
     [1, 5]
-    
+
 
 Thats done. Now we can calculate the mode and compare it with our mean and median values. 
 
@@ -455,7 +455,7 @@ print(get_variance(test2)) # 3.4
     2.22
     3.33
     2.89
-    
+
 
 Now we can test the variance of our height list with `get_variance()` function. 
 
@@ -517,7 +517,7 @@ print (get_stddev(test))
 ```
 
     76.7
-    
+
 
 So now we can finally calculate standard deviation for our height list and inspect the results.
 
