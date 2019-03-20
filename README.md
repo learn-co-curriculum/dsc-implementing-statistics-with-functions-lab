@@ -276,7 +276,7 @@ plt.hist(filtered_height, bins = 8);
 ```
 
 
-![png](index_files/index_16_0.png)
+![png](index_files/index_17_0.png)
 
 
 
