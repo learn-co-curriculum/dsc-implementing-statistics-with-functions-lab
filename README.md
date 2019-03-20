@@ -269,6 +269,15 @@ Great, now we can filter our height list and plot a new histogram for the new li
 filtered_height = filter_list(height)
 ```
 
+Now that we have filtered the outliers out of our data, let's recreate our histogram using our filtered data. 
+
+In the cell below:
+
+* Use `filter_list` to filter `height` and store the result in the variable `filtered_height`
+* Create a histogram of `filtered_height` with 8 bins, the same as we did above. 
+
+**_NOTE_**: You do not need to reimport matplotlib--once it's been imported once, it's stored in memory and can be accessed whenever we like in other cells. 
+
 
 ```python
 # Plot a histogram for the new list - use 8 bins as before
@@ -276,8 +285,10 @@ plt.hist(filtered_height, bins = 8);
 ```
 
 
-![png](index_files/index_17_0.png)
+![png](index_files/index_18_0.png)
 
+
+Since we've filtered our data to remove outliers, we should also recalculate the mean.  Do this now in the cell below. 
 
 
 ```python
