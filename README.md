@@ -152,7 +152,7 @@ Since we've filtered our data to remove outliers, we should also recalculate the
 
 ```python
 # Get the mean of the new list using our get_mean() function
-get_mean(height_filtered)
+get_mean(filtered_height)
 
 # 66.85
 ```
