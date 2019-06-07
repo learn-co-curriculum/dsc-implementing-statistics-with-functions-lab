@@ -511,14 +511,7 @@ from math import sqrt
 
 def get_stddev(list):
     
-    sum = 0
-    
-    meann = get_mean(list)
-    
-    for i in range(len(list)):
-        sum += pow((list[i]-meann),2)
-
-    stddev = sqrt(sum/len(list)-1)
+    stddev = sqrt(get_variance(list))
     
     return round(stddev, 2) 
 
@@ -527,7 +520,7 @@ test = [120,112,131,211,312,90]
 print (get_stddev(test))
 ```
 
-    76.7
+    76.71
 
 
 So now we can finally calculate standard deviation for our height list and inspect the results. 
@@ -540,7 +533,7 @@ get_stddev(height)
 
 
 
-    9.31
+    9.37
 
 
 
