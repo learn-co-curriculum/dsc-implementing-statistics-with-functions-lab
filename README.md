@@ -458,9 +458,9 @@ def get_variance(sample):
 
 test1 = [1, 2, 3, 5, 5, 4]
 test2 = [1, 1, 1, 2, 3, 4, 5, 5, 5]
-print(get_variance(test1)) # 3.2
-print(get_mean(test1))
-print(get_variance(test2)) # 3.4
+print(get_variance(test1)) # 2.22
+print(get_mean(test1))  # 3.33
+print(get_variance(test2)) # 2.89
 ```
 
     2.22
@@ -537,9 +537,9 @@ get_stddev(height)
 
 
 
-So 9.31 inches is the amount of deviation present in our dataset. As we are still including outlier values, this might still slightly be affected but these results are now much more reliable. 
+So 9.37 inches is the amount of deviation present in our dataset. As we are still including outlier values, this might still slightly be affected but these results are now much more reliable. 
 
-We shall finally build a boxplot for height data and see if it agrees with our understanding for this data that we have developed up to this point. USe the matplotlib's boxplot method with height data and comment on the output 
+We shall finally build a boxplot for height data and see if it agrees with our understanding for this data that we have developed up to this point. Use the matplotlib's boxplot method with height data and comment on the output 
 
 ## Summary 
 
