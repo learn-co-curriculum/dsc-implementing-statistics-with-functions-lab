@@ -335,7 +335,7 @@ So now we can finally calculate standard deviation for our height list and inspe
 
 ```python
 get_stddev(height)
-# 9.31
+# 9.37
 ```
 
 So 9.37 inches is the amount of deviation present in our dataset. As we are still including outlier values, this might still slightly be affected but these results are now much more reliable. 
