@@ -342,6 +342,13 @@ So 9.37 inches is the amount of deviation present in our dataset. As we are stil
 
 We shall finally build a boxplot for height data and see if it agrees with our understanding for this data that we have developed up to this point. Use the matplotlib's boxplot method with height data and comment on the output 
 
+
+
+
+```python
+# boxplot here
+```
+
 ## Summary 
 
 In this lab, we performed a basic, yet detailed statistical analysis around measuring the tendencies of center and spread in a given dataset. We looked at building a number of functions to calculate different measures and also used some statistical visualizations to strengthen our intuitions around the dataset. We shall see how we can simplify this process as we study numpy and pandas libraries to ease out the programming load while calculating basic statistics. 
