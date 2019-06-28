@@ -539,7 +539,32 @@ get_stddev(height)
 
 So 9.37 inches is the amount of deviation present in our dataset. As we are still including outlier values, this might still slightly be affected but these results are now much more reliable. 
 
-We shall finally build a boxplot for height data and see if it agrees with our understanding for this data that we have developed up to this point. Use the matplotlib's boxplot method with height data and comment on the output 
+We shall finally build a boxplot for height data and see if it agrees with our understanding for this data that we have developed up to this point. Use the matplotlib's boxplot method with height data and comment on the output.
+
+
+```python
+plt.boxplot(height)
+
+# the median is at 67 inches and there are three outliers at the upper end of the spectrum
+```
+
+
+
+
+    {'whiskers': [<matplotlib.lines.Line2D at 0x1190564a8>,
+      <matplotlib.lines.Line2D at 0x119056940>],
+     'caps': [<matplotlib.lines.Line2D at 0x119056d68>,
+      <matplotlib.lines.Line2D at 0x11905c1d0>],
+     'boxes': [<matplotlib.lines.Line2D at 0x119056358>],
+     'medians': [<matplotlib.lines.Line2D at 0x11905c5f8>],
+     'fliers': [<matplotlib.lines.Line2D at 0x11905ca20>],
+     'means': []}
+
+
+
+
+![png](index_files/index_38_1.png)
+
 
 ## Summary 
 
