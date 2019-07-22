@@ -186,7 +186,7 @@ Do you spot anything unusual above? Some outliers, maybe?
 
 We're just beginning to dig into the data stored in `height`. We'll begin by writing a function to calculate the mean of the data.  Recall the formula for calculating mean:
 
-$$ \Large \bar{x} = \frac{1}{N} \sum_{i=1}^{N}x_i $$
+$$ \Large \bar{x} = \frac{1}{n} \sum_{i=1}^{n}x_i $$
 
 Using the python skills you have learned so far, create a function `get_mean()` to perform the following tasks: 
 * Input a list of numbers (like the height list we have above)
@@ -431,20 +431,20 @@ To get an even clearer picture, We know we need to see how much the values devia
 
 ## Calculating the Variance
 
-The formula for variance has been shown earlier as: 
+The formula for variance is: 
 
-$$ \Large \sigma^2 = \frac{1}{n} \sum_{i=1}^{n}(x_i - \bar{x})^2 $$
+$$ \Large s^2 = \frac{1}{n - 1} \sum_{i=1}^{n}(x_i - \bar{x})^2 $$
 
-You are required to write a function In the cell below, that takes an array of numbers as input and returns the variance of the sample as output.
+Note that this formula here is for the **sample** variance. The formula is slightly different that the formula for calculating population variance. Read more about the difference [here](https://www.macroption.com/population-sample-variance-standard-deviation/). In the cell below, write a function that takes an array of numbers as input and returns the variance of the sample as output.
 
 
 ```python
 def get_variance(sample):
 
     # First, calculate the sample mean
-    N = len(sample)
+    n = len(sample)
     total = sum(sample)
-    sample_mean = total/N
+    sample_mean = total/n
     
     # Now, subtract the sample mean from each point and square the result. 
     val_minus_mu_accumulator = 0
@@ -452,20 +452,20 @@ def get_variance(sample):
         val_minus_mu_accumulator += (i - sample_mean)**2
     
     # Divde the total by the number of items in the sample  
-    variance = val_minus_mu_accumulator / N
+    variance = val_minus_mu_accumulator / (n - 1)
     
     return round(variance, 2)
 
 test1 = [1, 2, 3, 5, 5, 4]
 test2 = [1, 1, 1, 2, 3, 4, 5, 5, 5]
-print(get_variance(test1)) # 2.22
+print(get_variance(test1)) # 2.67
 print(get_mean(test1))  # 3.33
-print(get_variance(test2)) # 2.89
+print(get_variance(test2)) # 3.25
 ```
 
-    2.22
+    2.67
     3.33
-    2.89
+    3.25
 
 
 Now we can test the variance of our height list with our new `get_variance()` function. 
@@ -478,7 +478,7 @@ get_variance(height)
 
 
 
-    87.73
+    87.74
 
 
 
@@ -490,7 +490,7 @@ In the cell below, write a function that takes an array of numbers as input and 
 
 Recall that the formula for Standard Deviation is:
 
-$$ \Large\sigma = \sqrt{\frac{1}{n} \sum_{i=1}^{n}(x_i - \bar{x})^2} $$
+$$ \Large s = \sqrt{\frac{1}{n-1} \sum_{i=1}^{n}(x_i - \bar{x})^2} $$
 
 you would need `sqrt` method from `math` library to calculate the square root.
 
@@ -520,7 +520,7 @@ test = [120,112,131,211,312,90]
 print (get_stddev(test))
 ```
 
-    76.71
+    84.03
 
 
 So now we can finally calculate standard deviation for our height list and inspect the results. 
@@ -551,13 +551,13 @@ plt.boxplot(height)
 
 
 
-    {'whiskers': [<matplotlib.lines.Line2D at 0x1190564a8>,
-      <matplotlib.lines.Line2D at 0x119056940>],
-     'caps': [<matplotlib.lines.Line2D at 0x119056d68>,
-      <matplotlib.lines.Line2D at 0x11905c1d0>],
-     'boxes': [<matplotlib.lines.Line2D at 0x119056358>],
-     'medians': [<matplotlib.lines.Line2D at 0x11905c5f8>],
-     'fliers': [<matplotlib.lines.Line2D at 0x11905ca20>],
+    {'whiskers': [<matplotlib.lines.Line2D at 0x115cf72b0>,
+      <matplotlib.lines.Line2D at 0x115cf7748>],
+     'caps': [<matplotlib.lines.Line2D at 0x115cf7b70>,
+      <matplotlib.lines.Line2D at 0x115cf7f98>],
+     'boxes': [<matplotlib.lines.Line2D at 0x115cf7160>],
+     'medians': [<matplotlib.lines.Line2D at 0x115d01400>],
+     'fliers': [<matplotlib.lines.Line2D at 0x115d01828>],
      'means': []}
 
 
