@@ -2,7 +2,7 @@
 # Implementing Statistics with Functions - Lab
 
 ## Introduction 
-In this lab you'll dive deep into calculating the measures of central tendency and dispersion introduced in previous lessons. You will implement the code the formulas for these functions in python which will require you to use the programming skills that you have gained in the other sections of the module. Let's get started!
+In this lab you'll dive deep into calculating the measures of central tendency and dispersion introduced in previous lessons. You will code the formulas for these functions in python which will require you to use the programming skills that you have gained in the other sections of the module. Let's get started!
 
 ## Objectives
 
@@ -72,7 +72,7 @@ $$ \Large \bar{x} = \frac{1}{n} \sum_{i=1}^{n}x_i $$
 
 Using the python skills you have learned so far, create a function `get_mean()` to perform the following tasks: 
 * Input a list of numbers (like the height list we have above)
-* calculate the sum of numbers and length of the list 
+* Calculate the sum of numbers and length of the list 
 * Calculate mean from above, round off to 2 decimals and return it.
 
 
@@ -103,7 +103,7 @@ print("Sample Mean:", mean)
 # Sample Mean: 69.58
 ```
 
-So we have our mean length, 69.58, and this confirms our observations from the histogram. But we also some outliers in out data above and we know outliers affect the mean calculation by pulling mean value in their direction.  So let's remove these outliers and create a new list to see if our mean shifts of stays. We'll use a threshold of 80 inches, i.e. filter out any values greater than 80. 
+So we have our mean length, 69.58, and this confirms our observations from the histogram. But we also have some outliers in our data above and we know outliers affect the mean calculation by pulling the mean value in their direction. So let's remove these outliers and create a new list to see if our mean shifts or stays. We'll use a threshold of 80 inches, i.e. filter out any values greater than 80. 
  
 Perform following tasks:
 
@@ -168,7 +168,7 @@ The median is the value directly in the middle of the dataset. In statistical te
 If the dataset has an odd number of values, then the median is the middle number.
 If the dataset has an even number of values, then we take the mean of the middle two numbers.
 
-In the cell below, write a function that takes in an array of numbers and returns the median value for that dataset. Make sure you first check for even / odd and perform computation accordingly. The best approach to calculate the median is as follows:
+In the cell below, write a function that takes in an array of numbers and returns the median value for that dataset. Make sure you first check for even / odd and perform the computation accordingly. The best approach to calculate the median is as follows:
 
 1. Sort the data. 
 2. Check if the data is even or odd. 
@@ -209,9 +209,9 @@ Next, we'll calculate the Mode. This could give us better insight into the typic
 
 The mode is the value that shows up the most in a dataset. A dataset can have 0 or more modes. If no value shows up more than once, the dataset is considered to have no mode value. If two numbers show up the same number of times, that dataset is considered bimodal. Datasets where multiple values all show up the same number of times are considered multimodal.
 
-In the cell below, write a function that takes in a list of numbers and returns another list containing the mode value(s). In case of only one mode, the list would have a single element. 
+In the cell below, write a function that takes in a list of numbers and returns another list containing the mode value(s). In the case of only one mode, the list would have a single element. 
 
-**_Hint_**: Building a **_Frequency Distribution_** table using dictionaries is probably the easiest way to approach this problem. Use each unique element from the height list as a key, and frequency of this element as the value and build a dictionary. You can then simply identify the keys (heights) with maximum values. 
+**_Hint_**: Building a **_Frequency Distribution_** table using dictionaries is probably the easiest way to approach this problem. Use each unique element from the height list as a key, and the frequency of this element as the value and build a dictionary. You can then simply identify the keys (heights) with maximum values. 
 
 
 ```python
@@ -240,16 +240,16 @@ print(get_mode(test1)) # [5]
 print(get_mode(test2)) # [1, 5]
 ```
 
-That's done. Now can see calculate mode and compare it with our mean and median values. 
+That's done. Now you can see the calculated mode and compare it with our mean and median values. 
 
 
 ```python
 get_mode(height)
 ```
 
-So the mode value is much lower than our mean and median calculated earlier. What do you make of this? The answer to that could be subjective and depends on the problem. i.e. If your problem is to identify sizes for garments that would sell the most, you can not disregard mode. However, if you want to get an idea about the general or typical height of individuals, you can probably still do that with the median and the average. 
+So the mode value is much lower than our mean and median calculated earlier. What do you make of this? The answer to that could be subjective and depends on the problem. i.e. if your problem is to identify sizes for garments that would sell the most, you cannot disregard mode. However, if you want to get an idea about the general or typical height of individuals, you can probably still do that with the median and the average. 
 
-To get an even clearer picture, We know we need to see how much the values deviate from the central values we have identified. We have seen variance and standard deviation before as measures of such dispersion. Let's have a go at these to strengthen our understanding of this data. 
+To get an even clearer picture, we know we need to see how much the values deviate from the central values we have identified. We have seen variance and standard deviation before as measures of such dispersion. Let's have a go at these to strengthen our understanding of this data. 
 
 
 ## Calculating the Variance
@@ -258,7 +258,7 @@ The formula for variance is:
 
 $$ \Large s^2 = \frac{1}{n - 1} \sum_{i=1}^{n}(x_i - \bar{x})^2 $$
 
-Note that this formula here is for the **sample** variance. The formula is slightly different that the formula for calculating population variance. Read more about the difference [here](https://www.macroption.com/population-sample-variance-standard-deviation/). In the cell below, write a function that takes an array of numbers as input and returns the variance of the sample as output.
+Note that this formula here is for the **sample** variance. The formula is slightly different than the formula for calculating population variance. Read more about the difference [here](https://www.macroption.com/population-sample-variance-standard-deviation/). In the cell below, write a function that takes an array of numbers as input and returns the variance of the sample as output.
 
 
 ```python
@@ -330,7 +330,7 @@ print (get_stddev(test))
 # 84.03
 ```
 
-So now we can finally calculate standard deviation for our height list and inspect the results. 
+So now we can finally calculate the standard deviation for our height list and inspect the results. 
 
 
 ```python
