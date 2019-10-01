@@ -7,8 +7,8 @@ In this lab you'll dive deep into calculating the measures of central tendency a
 ## Objectives
 
 You will be able to:
-* Create functions to model measures of central tendency and dispersion
-* Perform basic statistical analysis of given data using measures of central tendency and dispersion 
+- Create functions to model measures of central tendency and dispersion
+- Perform basic statistical analysis of given data using measures of central tendency and dispersion 
 
 ## Dataset
 
@@ -140,13 +140,13 @@ print (height[:10]) # Expected Output: [74, 70, 61, 68, 66, 98, 99, 70, 65, 64]
     [74, 70, 61, 68, 66, 98, 99, 70, 65, 64]
 
 
-So around 4700 records of height, that's great. Next, we'll try plotting some basic **_Histograms_** for these records. 
+So, around 4700 records of height. That's great. Next, we'll try plotting some basic **_Histograms_** for these records. 
 
 ## Plotting Histograms
 
 We'll begin by importing the `pyplot` module from the library `matplotlib` and setting an alias of `plt` for it (so that we only have to type `plt.` instead of `matplotlib.pyplot.` each time we want to use it).  Note that `plt` is considered the **_Standard Alias_** for matplotlib.
 
-Run the cell below to import matplotlib and use it to create a histogram of our `height` data, with 8 different bins. 
+Run the cell below to import matplotlib and use it to create a histogram of our `height` data with 8 different bins. 
 
 
 ```python
@@ -215,7 +215,7 @@ print(get_mean(test2)) # 2.5
     2.5
 
 
-Now we'll test the function by passing in the height list.
+Now, we'll test the function by passing in the height list.
 
 
 ```python
@@ -230,7 +230,7 @@ print("Sample Mean:", mean)
     Sample Mean: 69.58
 
 
-So we have our mean length, 69.58, and this confirms our observations from the histogram. But we also have some outliers in our data above and we know outliers affect the mean calculation by pulling the mean value in their direction. So let's remove these outliers and create a new list to see if our mean shifts or stays. We'll use a threshold of 80 inches, i.e. filter out any values greater than 80. 
+So, we have our mean length, 69.58, and this confirms our observations from the histogram. But we also have some outliers in our data above and we know outliers affect the mean calculation by pulling the mean value in their direction. So, let's remove these outliers and create a new list to see if our mean shifts or stays. We'll use a threshold of 80 inches, i.e. filter out any values greater than 80. 
  
 Perform following tasks:
 
@@ -311,7 +311,7 @@ In the cell below, write a function that takes in a list of numbers and returns 
 
 1. Sort the data 
 2. Check if the data has even or odd number of data points 
-3. Calculate the median of the sorted data, now that you know if the data is even or odd. 
+3. Calculate the median of the sorted data now that you know if the data is even or odd. 
 
 (Hint: Recall that you can use modulo operator `%` in python to check if a value is even or odd -- odd numbers `% 2` will equal `1`, while even numbers `% 2` will equal `0`!)
 
@@ -358,7 +358,7 @@ get_median(height)
 
 
 
-So we have 67, which is much closer to the filtered list mean (66.85) than the mean we calculated with actual list (69.58). So median in this case seems to be a much better indicator of the central tendency found in the dataset. This makes sense because we've already learned that medians are less sensitive to outliers than mean values are! 
+So, we have 67, which is much closer to the filtered list mean (66.85) than the mean we calculated with actual list (69.58). So, median in this case seems to be a much better indicator of the central tendency found in the dataset. This makes sense because we've already learned that medians are less sensitive to outliers than mean values are! 
 
 Next, we'll calculate the mode. This could give us better insight into the typical values in the dataset based on how frequent a value is.  
 
@@ -422,7 +422,7 @@ get_mode(height)
 
 
 
-So the mode value is much lower than our mean and median calculated earlier. What do you make of this? The answer to that could be subjective and depends on the problem. i.e. if your problem is to identify sizes for garments that would sell the most, you cannot disregard mode. However, if you want to get an idea about the general or typical height of individuals, you can probably still do that with the median and the average. 
+So, the mode value is much lower than our mean and median calculated earlier. What do you make of this? The answer to that could be subjective and depends on the problem. i.e. if your problem is to identify sizes for garments that would sell the most, you cannot disregard mode. However, if you want to get an idea about the general or typical height of individuals, you can probably still do that with the median and the average. 
 
 To get an even clearer picture, we know we need to see how much the values deviate from the central values we have identified. We have seen variance and standard deviation before as measures of such dispersion. Let's have a go at these to strengthen our understanding of this data. 
 
@@ -433,7 +433,7 @@ The formula for variance is:
 
 $$ \Large s^2 = \frac{1}{n - 1} \sum_{i=1}^{n}(x_i - \bar{x})^2 $$
 
-Note that this formula here is for the **sample** variance. The formula is slightly different than the formula for calculating population variance. Read more about the difference [here](https://www.macroption.com/population-sample-variance-standard-deviation/). In the cell below, write a function that takes a list of numbers as input and returns the variance (rounded to two decimal places) of the sample as output.
+Note that this formula is for the **sample** variance. The formula is slightly different than the formula for calculating population variance. Read more about the difference [here](https://www.macroption.com/population-sample-variance-standard-deviation/). In the cell below, write a function that takes a list of numbers as input and returns the variance (rounded to two decimal places) of the sample as output.
 
 
 ```python
@@ -539,9 +539,9 @@ get_stddev(height)
 
 
 
-So 9.37 inches is the amount of deviation present in our dataset. As we are still including outlier values, this might slightly be affected but these results are now much more reliable. 
+So 9.37 inches is the amount of deviation present in our dataset. As we are still including outlier values, this might be slightly affected but these results are now much more reliable. 
 
-We shall finally build a boxplot for height data and see if it agrees with our understanding for this data that we have developed up to this point. Use the `matplotlib`'s `boxplot()` function with height data and comment on the output.
+Finally, we will build a boxplot for height data and see if it agrees with our understanding for this data that we have developed up to this point. Use the `matplotlib`'s `boxplot()` function with height data and comment on the output.
 
 
 ```python
@@ -570,4 +570,4 @@ plt.boxplot(height)
 
 ## Summary 
 
-In this lab, we performed a basic, yet detailed statistical analysis around measuring the tendencies of center and spread for a given dataset. We looked at building a number of functions to calculate different measures and also used some statistical visualizations to strengthen our intuitions around the dataset. We shall see how we can simplify this process as we study `numpy` and `pandas` libraries to ease out the programming load while calculating basic statistics. 
+In this lab, we performed a basic, yet detailed, statistical analysis around measuring the tendencies of center and spread for a given dataset. We looked at building a number of functions to calculate different measures and also used some statistical visualizations to strengthen our intuitions around the dataset. We shall see how we can simplify this process as we study `numpy` and `pandas` libraries to ease out the programming load while calculating basic statistics. 
