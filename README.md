@@ -7,8 +7,11 @@ In this lab you'll dive deep into calculating the measures of central tendency a
 ## Objectives
 
 You will be able to:
-- Create functions to model measures of central tendency and dispersion
-- Perform basic statistical analysis of given data using measures of central tendency and dispersion 
+
+* Calculate the measures of dispersion for a dataset
+* Compare the different measures of dispersion
+* Calculate the measures of central tendency for a dataset
+* Compare the different measures of central tendency
 
 ## Dataset
 
