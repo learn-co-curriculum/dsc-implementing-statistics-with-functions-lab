@@ -129,7 +129,9 @@ plt.hist(height, bins=8);
 ```
 
 
+    
 ![png](index_files/index_13_0.png)
+    
 
 
 Do you spot anything unusual above? Some outliers, maybe?
@@ -293,7 +295,9 @@ plt.hist(filtered_height, bins = 8);
 ```
 
 
+    
 ![png](index_files/index_29_0.png)
+    
 
 
 Since we've filtered our data to remove outliers, we should also recalculate the mean.  Do this now in the cell below, using our `get_mean()` function. 
@@ -759,7 +763,9 @@ plt.boxplot(height);
 ```
 
 
+    
 ![png](index_files/index_59_0.png)
+    
 
 
 ## Simplifying the Process with NumPy
@@ -781,7 +787,7 @@ print(round(np.mean(height), 2), "(NumPy version)")
 print()
 print("Median:")
 print(median, "(our version)")
-print(np.median(height_np), "(NumPy version)")
+print(np.median(height), "(NumPy version)")
 print()
 print("Mode:")
 print(mode, "(our version)")
