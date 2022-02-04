@@ -82,7 +82,9 @@ Do you spot anything unusual above? Some outliers, maybe?
 
 We're just beginning to dig into the data stored in `height`. We'll begin by writing a function to calculate the mean of the data.  Recall the formula for calculating mean:
 
+```latex
 $$ \Large \bar{x} = \frac{1}{n} \sum_{i=1}^{n}x_i $$
+```
 
 Using the Python skills you have learned so far, create a function `get_mean()` to perform the following tasks: 
 * Input a list of numbers (like the height list we have above)
