@@ -283,7 +283,9 @@ To get an even clearer picture, we know we need to see how much the values devia
 
 The formula for variance is: 
 
+```latex
 $$ \Large s^2 = \frac{1}{n - 1} \sum_{i=1}^{n}(x_i - \bar{x})^2 $$
+```
 
 Note that this formula is for the **sample** variance. The formula is slightly different than the formula for calculating population variance. Read more about the difference [here](https://www.macroption.com/population-sample-variance-standard-deviation/). In the cell below, write a function that takes a list of numbers as input and returns the variance (rounded to two decimal places) of the sample as output.
 
@@ -332,7 +334,9 @@ In the cell below, write a function that takes a list of numbers as input and re
 
 Recall that the formula for Standard Deviation is:
 
+```latex
 $$ \Large s = \sqrt{\frac{1}{n-1} \sum_{i=1}^{n}(x_i - \bar{x})^2} $$
+```
 
 To find the square root of a value in Python, you have two options (**either** approach will work):
 
